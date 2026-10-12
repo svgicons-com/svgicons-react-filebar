@@ -1,0 +1,47 @@
+{
+  "capturedAt": "2026-10-12T16:22:45.289Z",
+  "method": "Unedited full-page Microsoft Edge screenshots from npm test against the production build; not SVGicons export screenshots.",
+  "browserChannel": "msedge",
+  "sourceSha256": {
+    "index.html": "ae90a1122e8387884d4938864cbe42972953fc0c10b0fbb1c90b23479b7654e1",
+    "package.json": "36210b8684dfcc269df98b7f720da7c06655a9dbd175119ba06f04e02f2ca0df",
+    "package-lock.json": "1dc83bb92cd018eb6fa5fca0b023c6dd1f59b125786bb43f1e1f4b32e9c56e1b",
+    "tsconfig.json": "36289a1082e27e2b355857f702b31f9ed56cbc98bb9143371343412d1d55771f",
+    "src/App.tsx": "5a0b25348e9bb2715ced79e0252fdeda2339ef1d0ebd9628079fb56497ea59cb",
+    "src/icons.tsx": "d0f1ce52d11eb609be98f576c3ce3d2f47b032be67ca353c1d7e12ed59bf7217",
+    "src/main.tsx": "fe62b21169eee8f870b7ef27f8f208805356dc11bffdac0fc5df01d92f7dffe5",
+    "src/styles.css": "0769c1504e91c6e0911a68a22c4b785d4e2480925d768eec826d3a714f1ef692",
+    "tests/filebar.spec.ts": "fce5b959c1d01beceee3da6cd31c8198c5d24f3ff0b506b740cd33635ca80713",
+    "playwright.config.ts": "8b49f709100e8d1e547b2ecff2cdb8d9e26930ec237532c9ed2dae8b992246e5",
+    "icon-sources.json": "a3311ebf377dfd95e893624796bec820b1e0e12a862d1ba65b5871014dcac5b1"
+  },
+  "screenshots": [
+    {
+      "file": "docs/screenshots/light-24.png",
+      "sha256": "a47a7df174078bbd17a06435fdeaeba2f7092288651fbde7c9ceb673cf08bd0f",
+      "viewport": {
+        "width": 1360,
+        "height": 1080
+      },
+      "state": "Light, 24 px, Interface notes.md selected"
+    },
+    {
+      "file": "docs/screenshots/dark-20.png",
+      "sha256": "1b3feb6b7ddf4e24233d77c7a150f56d8413a1bc292b2caf2c8abed350549e90",
+      "viewport": {
+        "width": 1360,
+        "height": 1080
+      },
+      "state": "Dark, 20 px, Interface notes.md selected"
+    },
+    {
+      "file": "docs/screenshots/mobile-light.png",
+      "sha256": "26230d92c0e2df65469a00f2936e2eb0f28f83533ed928bc8d37507b71f035b2",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "state": "Light, 24 px, no selection"
+    }
+  ]
+}
