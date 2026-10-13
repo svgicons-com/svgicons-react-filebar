@@ -17,10 +17,16 @@ test('selection enables actions, local preview and download work', async ({ page
 test('filter removes selection, empty state recovers, deletion requires confirmation', async ({ page }) => {
   await page.goto('/');
   await page.getByRole('button', { name: /Interface notes.md/ }).click();
+  await expect(page.getByRole('status')).toHaveText('Interface notes.md selected.');
   await page.getByRole('searchbox').fill('not-a-file');
+  await expect(page.getByRole('status')).toHaveText('Selection cleared. Choose a file to enable its actions.');
+  await expect(page.getByRole('button', { name: 'Open', exact: true })).toBeDisabled();
+  await expect(page.getByRole('button', { name: 'Download', exact: true })).toBeDisabled();
   await expect(page.getByRole('heading', { name: 'No matching files' })).toBeVisible();
   await expect(page.getByRole('button', { name: 'Delete', exact: true })).toBeDisabled();
   await page.getByRole('button', { name: 'Clear filter' }).click();
+  await expect(page.getByRole('status')).toHaveText('Selection cleared. Choose a file to enable its actions.');
+  await expect(page.getByRole('button', { name: /Interface notes.md/ })).toHaveAttribute('aria-pressed', 'false');
   await page.getByRole('button', { name: /Interface notes.md/ }).click();
   await page.getByRole('button', { name: 'Delete', exact: true }).click();
   await page.getByRole('button', { name: 'Cancel', exact: true }).click();
