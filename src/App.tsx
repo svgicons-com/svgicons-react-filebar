@@ -56,7 +56,7 @@ export function App() {
           {action('download','Download',download,!current)}
           {action('trash-2','Delete',() => setPendingDelete(true),!current)}
         </div>
-        <div className="filter"><Icon name="search" size={20}/><label className="sr-only" htmlFor="search">Filter files</label><input ref={search} id="search" type="search" placeholder="Find a file by name…" value={query} onChange={event => {setQuery(event.target.value);setSelected(null);setPendingDelete(false);}}/><span>{visible.length} shown</span></div>
+        <div className="filter"><Icon name="search" size={20}/><label className="sr-only" htmlFor="search">Filter files</label><input ref={search} id="search" type="search" placeholder="Find a file by name…" value={query} onChange={event => {setQuery(event.target.value);setSelected(null);setPendingDelete(false);setMessage('Selection cleared. Choose a file to enable its actions.');}}/><span>{visible.length} shown</span></div>
         <div className="list-heading"><span>NAME</span><span>SELECTION</span></div>
         <ul className="file-list" aria-label="Files">
           {visible.map(file => <li key={file.id}><button className="file-row" aria-pressed={selected === file.id} onClick={() => {setSelected(selected === file.id ? null : file.id);setPendingDelete(false);setMessage(selected === file.id ? 'Selection cleared.' : `${file.name} selected.`);}}><span className="file-symbol"><Icon name="file" size={size}/></span><span className="file-info"><strong>{file.name}</strong><small>{file.description}</small></span><span className="selection-label">{selected === file.id ? 'Selected' : 'Select'}</span></button></li>)}
